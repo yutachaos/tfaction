@@ -17,6 +17,9 @@ export GH_COMMENT_VAR_plan_workflow_name=$PLAN_WORKFLOW_NAME
 github-comment exec -- jq --version
 github-comment exec -- gh version
 
+ls
+echo $GH_COMMENT_CONFIG
+
 pr_head_sha=$(jq -r ".head.sha" "$CI_INFO_TEMP_DIR/pr.json")
 
 # https://github.com/suzuki-shunsuke/tfaction/pull/1570#issuecomment-1987382651
